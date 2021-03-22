@@ -16,11 +16,14 @@ class Object {
  protected:
 	Cell* cell;
   char type;
+  int status = 1;
  public:
   Object(Cell* c = nullptr);
   virtual void live() = 0; // жизнь объекта
   char getType();
   void setCell(Cell* c);
+  void death();
+  int getStatus();
 };
 
 #endif // INCLUDE_OBJECT_H_

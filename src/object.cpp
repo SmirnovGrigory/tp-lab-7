@@ -13,3 +13,11 @@ void Object::setCell(Cell* c) {
 char Object::getType() {
 	return type;
 }
+
+void Object::death() {
+	status = DEAD;
+}
+
+int Object::getStatus() {
+	return status;
+}

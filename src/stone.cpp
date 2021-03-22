@@ -12,7 +12,7 @@ Stone::Stone(Cell* c = nullptr) : Object(c) {
 void Stone::live() {
 	durability--;
 	if (durability <= 0) {
-		cell->killMe();
-		cell = nullptr;
+		cell->setNull();
+		death();
 	}
 }

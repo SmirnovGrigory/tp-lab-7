@@ -4,10 +4,9 @@
 
 typedef size_t coord_t;
 
-struct Pair
-{
-	coord_t x; // 0..M-1
-	coord_t y; // 0..N-1
+struct Pair {
+	coord_t x; // 0..N-1
+	coord_t y; // 0..M-1
 };
 
 const size_t N = 70;

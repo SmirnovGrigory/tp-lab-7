@@ -8,10 +8,9 @@
 #include <list>
 #include <vector>
 
-class Ocean
-{
-
-private:
+class Ocean {
+ friend Cell;
+ private:
 	Cell** cells;
 	std::vector<Object*> stuff;
 	size_t n;

@@ -6,7 +6,6 @@
 #include "object.h"
 
 class Ocean;
-
 class Cell
 {
 	friend Ocean;
@@ -23,7 +22,13 @@ public:
 	void init(Pair p, Ocean* oc);
 	Object* getObject() const;
 	void setObject(Object* o);
-	void killMe();
+	void setNull();
+	//Ocean* getOcean() { return ocean; };
+
+	Cell* getTop();
+	Cell* getBot();
+	Cell* getLeft();
+	Cell* getRight();
 };
 
 #endif // INCLUDE_CELL_H_
