@@ -6,6 +6,7 @@
 Stone::Stone(Cell* c = nullptr) : Object(c) {
 	std::random_device seed;
 	durability = 10 + (seed() % 200);
+	type = STONE_N;
 }
 
 void Stone::live() {

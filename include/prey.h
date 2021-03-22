@@ -2,4 +2,16 @@
 #ifndef INCLUDE_PREY_H_
 #define INCLUDE_PREY_H_
 
+#include "object.h"
+
+class Cell;
+class Prey : public Object {
+protected:
+  int liveCycle = 20;
+  int reproductionCycle = 10;
+public:
+  Prey(Cell* c = nullptr);
+  virtual void live();
+};
+
 #endif // INCLUDE_PREY_H_

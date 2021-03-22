@@ -7,6 +7,7 @@
 #define STONE_N '#'
 #define PREY_N 'f'
 #define PREDATOR_N 'S'
+#define NOTHING_N '.'
 
 enum class ObjType { STONE, PREY, PREDATOR };
 
@@ -14,9 +15,11 @@ class Cell;
 class Object {
  protected:
 	Cell* cell;
+  char type;
  public:
   Object(Cell* c = nullptr);
   virtual void live() = 0; // жизнь объекта
+  char getType();
   void setCell(Cell* c);
 };
 

@@ -4,12 +4,12 @@
 
 #include "object.h"
 
-class Stone : Object {
+class Stone : public Object {
  protected:
   int durability = 100;
  public:
    Stone(Cell* c = nullptr);
-   void live();
+   virtual void live();
 };
 
 #endif // INCLUDE_STONE_H_
