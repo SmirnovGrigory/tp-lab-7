@@ -11,6 +11,7 @@ protected:
   int reproductionCycle = 10;
 public:
   Prey(Cell* c = nullptr);
+  void resetReproductionCycle();
   Cell* toGo();
   virtual void live();
 };

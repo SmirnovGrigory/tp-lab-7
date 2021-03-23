@@ -5,7 +5,7 @@
 #include <random>
 #include <vector>
 
-Prey::Prey(Cell* c = nullptr) : Object(c) {
+Prey::Prey(Cell* c) : Object(c) {
 	std::random_device seed;
 	liveCycle = 20 + (seed() % 5);
 	type = PREY_N;
@@ -31,6 +31,10 @@ Cell* Prey::toGo() {
 	}
 }
 
+void Prey::resetReproductionCycle() {
+	reproductionCycle = 10;
+}
+
 void Prey::live() {
 	liveCycle--;
 	if (liveCycle == 0) {
@@ -51,7 +55,8 @@ void Prey::live() {
 		if (forChild != nullptr) {
 			Object* o = new Prey(forChild);
 			forChild->setObject(o);
-			//надо поместить новую рыбу в общий список, дать ей доступ к океану?
+			forChild->ocean->addObj(o);
+			resetReproductionCycle();
 		}
 	}
 }

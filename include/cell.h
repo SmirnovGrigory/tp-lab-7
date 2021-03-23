@@ -5,10 +5,12 @@
 #include "common.h"
 #include "object.h"
 
+class Prey;
 class Ocean;
 class Cell
 {
 	friend Ocean;
+	friend Prey;
 private:
 	Pair crd;
 	Object* obj;
@@ -23,7 +25,6 @@ public:
 	Object* getObject() const;
 	void setObject(Object* o);
 	void setNull();
-	//Ocean* getOcean() { return ocean; };
 
 	Cell* getTop();
 	Cell* getBot();

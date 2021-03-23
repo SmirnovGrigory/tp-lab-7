@@ -2,4 +2,15 @@
 #ifndef INCLUDE_PREDATOR_H_
 #define INCLUDE_PREDATOR_H_
 
+#include "prey.h"
+
+class Cell;
+class Predator : public Prey {
+ protected:
+   int satiety = 15;
+ public:
+  Predator(Cell* c = nullptr);
+  virtual void live();
+};
+
 #endif // INCLUDE_PREDATOR_H_

@@ -5,6 +5,8 @@
 #include "common.h"
 #include "Cell.h"
 #include "Stone.h"
+#include "Prey.h"
+#include "Predator.h"
 #include <list>
 #include <vector>
 
@@ -20,7 +22,9 @@ public:
 	Ocean(size_t n = N, size_t m = M);
 	~Ocean();
 	void print() const;
-	void addObjects(int stones, int preys, int predators);
+	void fillType(int number, char type);
+	void fillAll(int stones, int preys, int predators);
+	void addObj(Object* o);
 	void run();
 	size_t getN();
 	size_t getM();
