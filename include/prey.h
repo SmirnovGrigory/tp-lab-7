@@ -2,7 +2,7 @@
 #ifndef INCLUDE_PREY_H_
 #define INCLUDE_PREY_H_
 
-#include "object.h"
+#include "../include/object.h"
 
 class Cell;
 class Prey : public Object {

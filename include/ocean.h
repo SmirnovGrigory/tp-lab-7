@@ -2,11 +2,11 @@
 #ifndef INCLUDE_OCEAN_H_
 #define INCLUDE_OCEAN_H_
 
-#include "common.h"
-#include "Cell.h"
-#include "Stone.h"
-#include "Prey.h"
-#include "Predator.h"
+#include "../include/common.h"
+#include "../include/Cell.h"
+#include "../include/Stone.h"
+#include "../include/Prey.h"
+#include "../include/Predator.h"
 #include <list>
 #include <vector>
 
