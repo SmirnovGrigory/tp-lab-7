@@ -5,12 +5,12 @@
 
 Ocean::Ocean(size_t n, size_t m) {
   cells = new Cell * [n];
-  for (size_t i = 0; i < n; i++)
+  for (unsigned i = 0; i < n; i++)
     cells[i] = new Cell[m];
   this->n = n;
   this->m = m;
-  for (size_t i = 0; i < n; i++)
-    for (size_t j = 0; j < m; j++)
+  for (unsigned i = 0; i < n; i++)
+    for (unsigned j = 0; j < m; j++)
       cells[i][j].init({ i, j }, this);
 }
 
