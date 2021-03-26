@@ -58,8 +58,9 @@ void Ocean::run() {
   for (int i = 0; i < stuff.size(); i++)
     stuff[i]->live();
   for (int i = 0; i < stuff.size(); i++)
-    if (stuff[i]->getStatus() == DEAD)
+    if (stuff[i]->getStatus() == DEAD) {
       stuff.erase(stuff.begin() + i);
+    }
 }
 
 void Ocean::print() const {

@@ -12,15 +12,18 @@ Predator::Predator(Cell* c) : Prey(c) {
 
 Cell* Predator::devour() {
 	std::vector<Cell*> ways;
-
-	if (cell->getTop()->getObject()->getType() == PREY_N)
-		ways.push_back(cell->getTop());
-	if (cell->getBot()->getObject()->getType() == PREY_N)
-		ways.push_back(cell->getBot());
-	if (cell->getLeft()->getObject()->getType() == PREY_N)
-		ways.push_back(cell->getLeft());
-	if (cell->getRight()->getObject()->getType() == PREY_N)
-		ways.push_back(cell->getRight());
+	if (cell->getTop()->getObject()!=nullptr)
+	  if (cell->getTop()->getObject()->getType() == PREY_N)
+		  ways.push_back(cell->getTop());
+	if (cell->getTop()->getObject() != nullptr)
+	  if (cell->getBot()->getObject()->getType() == PREY_N)
+		  ways.push_back(cell->getBot());
+	if (cell->getTop()->getObject() != nullptr)
+	  if (cell->getLeft()->getObject()->getType() == PREY_N)
+		  ways.push_back(cell->getLeft());
+	if (cell->getTop()->getObject() != nullptr)
+	  if (cell->getRight()->getObject()->getType() == PREY_N)
+		  ways.push_back(cell->getRight());
 
 	if (ways.empty()) {
 		return nullptr;
