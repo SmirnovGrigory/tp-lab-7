@@ -11,6 +11,7 @@ class Cell
 {
 	friend Ocean;
 	friend Prey;
+	friend Predator;
 private:
 	Pair crd;
 	Object* obj;

@@ -9,6 +9,8 @@
 #define PREDATOR_N 'S'
 #define NOTHING_N '.'
 
+#define DEAD -1;
+
 enum class ObjType { STONE, PREY, PREDATOR };
 
 class Cell;

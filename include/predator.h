@@ -10,6 +10,7 @@ class Predator : public Prey {
    int satiety = 15;
  public:
   Predator(Cell* c = nullptr);
+  Cell* devour();
   virtual void live();
 };
 

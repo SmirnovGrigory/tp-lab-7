@@ -55,7 +55,12 @@ void Ocean::addObj(Object* o) {
 }
 
 void Ocean::run() {
-
+   
+  for (int i = 0; i < stuff.size(); i++)
+    stuff[i]->live();
+  for (int i = 0; i < stuff.size(); i++)
+    if (stuff[i]->getStatus() == DEAD)
+      stuff.erase(stuff.cbegin() + i);
 }
 
 void Ocean::print() const {
