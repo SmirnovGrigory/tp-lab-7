@@ -5,13 +5,14 @@
 #include "common.h"
 #include "object.h"
 
+//class Predator;
 class Prey;
 class Ocean;
-class Cell
-{
-	friend Ocean;
-	friend Prey;
-	friend Predator;
+
+class Cell {
+	friend class Ocean;
+	friend class Prey;
+	friend class Predator;
 private:
 	Pair crd;
 	Object* obj;
